@@ -1,0 +1,64 @@
+{
+  "project": "substitua-pelo-nome-do-projeto",
+  "last_updated": "AAAA-MM-DD",
+  "rules": {
+    "single_active_feature": true,
+    "passing_requires_evidence": true,
+    "do_not_skip_verification": true
+  },
+  "status_legend": {
+    "not_started": "O trabalho não começou.",
+    "in_progress": "A feature é a tarefa ativa atual.",
+    "blocked": "O trabalho não pode continuar até que um blocker documentado seja resolvido.",
+    "passing": "A verificação necessária passou e evidência está registrada."
+  },
+  "features": [
+    {
+      "id": "chat-001",
+      "priority": 1,
+      "area": "chat",
+      "title": "Criar uma nova conversa",
+      "user_visible_behavior": "Um usuário pode clicar em Nova Conversa e ver uma conversa vazia fresca.",
+      "status": "not_started",
+      "verification": [
+        "Abrir o app.",
+        "Clicar em Nova Conversa.",
+        "Verificar que uma nova conversa aparece na sidebar.",
+        "Verificar que o painel principal mostra um estado de conversa vazia."
+      ],
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "chat-002",
+      "priority": 2,
+      "area": "chat",
+      "title": "Enviar uma mensagem na conversa atual",
+      "user_visible_behavior": "Um usuário pode submeter uma mensagem e vê-la aparecer na thread ativa.",
+      "status": "not_started",
+      "verification": [
+        "Abrir uma conversa existente.",
+        "Digitar uma mensagem no input.",
+        "Submeter a mensagem.",
+        "Verificar que a nova mensagem aparece na thread."
+      ],
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "chat-003",
+      "priority": 3,
+      "area": "chat",
+      "title": "Persistir a lista de conversas ativas",
+      "user_visible_behavior": "Um usuário vê conversas criadas anteriormente após reiniciar o app.",
+      "status": "not_started",
+      "verification": [
+        "Criar duas conversas.",
+        "Reiniciar o app.",
+        "Verificar que ambas conversas ainda aparecem na sidebar."
+      ],
+      "evidence": [],
+      "notes": ""
+    }
+  ]
+}

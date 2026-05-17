@@ -413,6 +413,43 @@ const arSkillItems = [
   { text: "نظرة عامة على المهارات", link: "/ar/skills/" }
 ];
 
+const ptLectureItems = [
+  { text: "Bem-vindo", link: "/pt/" },
+  { text: "Por que Agents Capazes Ainda Falham", link: "/pt/lectures/lecture-01-why-capable-agents-still-fail/" },
+  { text: "O que Harness Realmente Significa", link: "/pt/lectures/lecture-02-what-a-harness-actually-is/" },
+  { text: "Torne o Repositório Sua Única Fonte de Verdade", link: "/pt/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/" },
+  { text: "Divida Instruções Entre Arquivos", link: "/pt/lectures/lecture-04-why-one-giant-instruction-file-fails/" },
+  { text: "Por que Tarefas Longas Perdem Continuidade", link: "/pt/lectures/lecture-05-why-long-running-tasks-lose-continuity/" },
+  { text: "Por que Inicialização Precisa de Sua Própria Fase", link: "/pt/lectures/lecture-06-why-initialization-needs-its-own-phase/" },
+  { text: "Por que Agents Excedem e Sub-Finalizam", link: "/pt/lectures/lecture-07-why-agents-overreach-and-under-finish/" },
+  { text: "Por que Listas de Features São Primitivos de Harness", link: "/pt/lectures/lecture-08-why-feature-lists-are-harness-primitives/" },
+  { text: "Por que Agents Declaram Vitória Muito Cedo", link: "/pt/lectures/lecture-09-why-agents-declare-victory-too-early/" },
+  { text: "Por que Testes End-to-End Mudam Resultados", link: "/pt/lectures/lecture-10-why-end-to-end-testing-changes-results/" },
+  { text: "Por que Observabilidade Pertence Dentro do Harness", link: "/pt/lectures/lecture-11-why-observability-belongs-inside-the-harness/" },
+  { text: "Por que Toda Sessão Deve Deixar um Estado Limpo", link: "/pt/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" }
+];
+
+const ptProjectItems = [
+  { text: "Bem-vindo", link: "/pt/projects/" },
+  { text: "Prompt-Only vs. Rules-First", link: "/pt/projects/project-01-baseline-vs-minimal-harness/" },
+  { text: "Agent-Readable Workspace", link: "/pt/projects/project-02-agent-readable-workspace/" },
+  { text: "Multi-Session Continuity", link: "/pt/projects/project-03-multi-session-continuity/" },
+  { text: "Runtime Feedback e Scope Control", link: "/pt/projects/project-04-incremental-indexing/" },
+  { text: "Self-Verification e Role Separation", link: "/pt/projects/project-05-grounded-qa-verification/" },
+  { text: "Complete Harness (Capstone)", link: "/pt/projects/project-06-runtime-observability-and-debugging/" }
+];
+
+const ptResourceItems = [
+  { text: "Visão Geral", link: "/pt/resources/" },
+  { text: "Templates em Português", link: "/pt/resources/templates/" },
+  { text: "Referência em Português", link: "/pt/resources/reference/" },
+  { text: "Pacote Avançado", link: "/pt/resources/openai-advanced/" }
+];
+
+const ptSkillItems = [
+  { text: "Visão Geral de Skills", link: "/pt/skills/" }
+];
+
 const zhTWLectureItems = [
   { text: "歡迎", link: "/zh-TW/" },
   { text: "模型能力強，不等於執行可靠", link: "/zh-TW/lectures/lecture-01-why-capable-agents-still-fail/" },
@@ -545,6 +582,13 @@ const zhSourceItems = {
   projects: zhProjectItems,
   resources: zhResourceItems,
   skills: zhSkillItems
+};
+
+const ptSourceItems = {
+  lectures: ptLectureItems,
+  projects: ptProjectItems,
+  resources: ptResourceItems,
+  skills: ptSkillItems
 };
 
 export default withMermaid(
@@ -923,6 +967,28 @@ export default withMermaid(
           darkModeSwitchTitle: "Включить тёмную тему",
           socialLinks: [{ icon: "github", link: githubRepoTreeLink }]
         }
+      },
+      pt: {
+        label: "Português",
+        lang: "pt-BR",
+        link: "/pt/",
+        themeConfig: createLocaleTheme("pt", ptSourceItems, {
+          lectures: "Lectures",
+          projects: "Projetos",
+          resources: "Biblioteca",
+          skills: "Skills",
+          resourceLibrary: "Biblioteca de Recursos",
+          tryHarness: "Try Harness ↗",
+          outline: "Nesta página",
+          prev: "Anterior",
+          next: "Próximo",
+          lastUpdated: "Última atualização",
+          returnToTop: "Voltar ao topo",
+          sidebarMenu: "Menu",
+          darkModeSwitch: "Tema",
+          lightModeSwitchTitle: "Mudar para tema claro",
+          darkModeSwitchTitle: "Mudar para tema escuro"
+        })
       }
     }
 }));
